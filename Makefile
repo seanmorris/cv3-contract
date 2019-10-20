@@ -31,14 +31,16 @@
 # 	-w="/app" \
 # 	node:12.6.0-alpine \
 # 		rm -rf node_modules *.js configure;
-
-.PHONY: build update test clean
+.PHONY: build build-test install update test clean hooks
 
 build:
 	@ npx babel source --out-dir .
 
 build-test:
 	@ npx babel source test --out-dir .
+
+build-dist:
+	@ brunch build -p
 
 install:
 	@ npm install
@@ -51,3 +53,6 @@ test:
 
 clean:
 	@ rm -rf node_modules *.js
+
+hooks:
+	git config core.hooksPath .githooks

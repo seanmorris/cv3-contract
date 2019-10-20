@@ -1,7 +1,7 @@
-const checkSymbol      = Symbol('check');
-const missingSymbol    = Symbol('missing');
-const methodsSymbol    = Symbol('methods');
-const contractSymbol   = Symbol('contract');
+const checkSymbol    = Symbol('check');
+const missingSymbol  = Symbol('missing');
+const methodsSymbol  = Symbol('methods');
+const contractSymbol = Symbol('contract');
 
 export class Interface
 {
